@@ -1,0 +1,69 @@
+{
+  "name": "trdc-showcase",
+  "version": "1.0.0",
+  "description": "TRDC's Research Showcase - Tuwaiq Research & Development Center",
+  "author": "Tuwaiq Research & Development Center",
+  "private": true,
+  "main": "public/electron.js",
+  "homepage": "https://omarnj-lab.github.io/trdc-showcase",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-dev": "concurrently \"BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && ELECTRON_START_URL=http://localhost:3000 electron .\"",
+    "electron-build": "react-scripts build && electron-builder",
+    "electron-build-mac": "react-scripts build && electron-builder --mac",
+    "electron-build-win": "react-scripts build && electron-builder --win",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "build": {
+    "appId": "com.tuwaiq.trdc-showcase",
+    "productName": "TRDC Showcase",
+    "files": [
+      "build/**/*",
+      "public/electron.js"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.education"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "electron": "^41.1.1",
+    "electron-builder": "^26.8.1",
+    "gh-pages": "^6.3.0",
+    "wait-on": "^9.0.4"
+  }
+}
