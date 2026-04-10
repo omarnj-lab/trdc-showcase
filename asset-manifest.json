@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/trdc-showcase/static/css/main.0b7e4f64.css",
+    "main.js": "/trdc-showcase/static/js/main.c4580a08.js",
+    "index.html": "/trdc-showcase/index.html",
+    "main.0b7e4f64.css.map": "/trdc-showcase/static/css/main.0b7e4f64.css.map",
+    "main.c4580a08.js.map": "/trdc-showcase/static/js/main.c4580a08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b7e4f64.css",
+    "static/js/main.c4580a08.js"
+  ]
+}
