@@ -1,6 +1,8 @@
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import './App.css';
 
+const BASE = process.env.PUBLIC_URL || '';
+
 /* ─────────────────────────────────────
    DATA
    ───────────────────────────────────── */
@@ -302,7 +304,7 @@ const products = [
       'Suggesting Bootcamps and Programs Names',
       'Create Challenges for Flagyard and Cyber Security Projects',
     ],
-    media: { type: 'video', src: '/tuwaiqai-demo.mp4' },
+    media: { type: 'video', src: `${BASE}/tuwaiqai-demo.mp4` },
   },
   {
     id: 'aidoc',
@@ -332,7 +334,7 @@ const products = [
         desc: 'Scores, page references, text snippets, issue prioritization, actionable recommendations, and cross-reference analysis',
       },
     ],
-    media: { type: 'image', src: '/aidoc-screenshot.png' },
+    media: { type: 'image', src: `${BASE}/aidoc-screenshot.png` },
   },
   {
     id: 'tuwaiqai-chat',
@@ -350,7 +352,7 @@ const products = [
       'Arabic to English Translation',
       'Concept Explanation in Simple Terms',
     ],
-    media: { type: 'image', src: '/tuwaiqAi.jpg' },
+    media: { type: 'image', src: `${BASE}/tuwaiqAi.jpg` },
   },
   {
     id: 'amrni',
@@ -368,7 +370,7 @@ const products = [
       'Currency Conversion & Zakat Calculation',
       'Qibla Direction & Daily Assistants',
     ],
-    media: { type: 'image', src: '/FunctionCall_app.jpg' },
+    media: { type: 'image', src: `${BASE}/FunctionCall_app.jpg` },
   },
   {
     id: 'smart-auditor',
@@ -398,7 +400,7 @@ const products = [
         desc: 'One-click full audit across all 7 agents with 230+ record analysis and detailed findings',
       },
     ],
-    media: { type: 'image', src: '/internal_audit.jpg' },
+    media: { type: 'image', src: `${BASE}/internal_audit.jpg` },
   },
   {
     id: 'aisa-functioncall',
@@ -416,7 +418,7 @@ const products = [
       'Covers 5 Arabic Dialects',
       'Explicit Decision Traces for Interpretable AI',
     ],
-    media: { type: 'image', src: '/arafunctioncalling_model.png' },
+    media: { type: 'image', src: `${BASE}/arafunctioncalling_model.png` },
     resources: [{ label: 'HuggingFace', url: 'https://huggingface.co/AISA-Framework/AISA-AR' }],
   },
 ];
@@ -590,8 +592,8 @@ function App() {
 
             {/* Right: TRDC Poster */}
             <div className="hero-image-col">
-              <div className="hero-image-frame" onClick={() => setLightbox({ type: 'image', src: '/mainbg.jpg', title: 'مركز طويق للأبحاث والتطوير' })} style={{ cursor: 'pointer' }}>
-                <img src="/mainbg.jpg" alt="مركز طويق للأبحاث والتطوير" className="hero-mountain-img" />
+              <div className="hero-image-frame" onClick={() => setLightbox({ type: 'image', src: `${BASE}/mainbg.jpg`, title: 'مركز طويق للأبحاث والتطوير' })} style={{ cursor: 'pointer' }}>
+                <img src={`${BASE}/mainbg.jpg`} alt="مركز طويق للأبحاث والتطوير" className="hero-mountain-img" />
                 <div className="hero-image-hover">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="28" height="28">
                     <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
@@ -703,9 +705,9 @@ function App() {
 
             <div className="news-grid news-grid-single">
               {/* Balsam */}
-              <div className="news-card news-card-balsam" onClick={() => setLightbox({ type: 'pdf', src: '/balsam-indicator.pdf', title: 'Balsam Indicator' })}>
+              <div className="news-card news-card-balsam" onClick={() => setLightbox({ type: 'pdf', src: `${BASE}/balsam-indicator.pdf`, title: 'Balsam Indicator' })}>
                 <div className="news-balsam-logo">
-                  <img src="/king-salman-logo.jpg" alt="King Salman Global Academy" />
+                  <img src={`${BASE}/king-salman-logo.jpg`} alt="King Salman Global Academy" />
                 </div>
                 <div className="news-card-body">
                   <div className="news-card-badge" style={{ background: 'linear-gradient(135deg, #6C5CE7, #A29BFE)' }}>تعاون بحثي</div>
@@ -727,9 +729,9 @@ function App() {
               </div>
 
               {/* ROR */}
-              <div className="news-card news-card-balsam" onClick={() => setLightbox({ type: 'image', src: '/ror.jpg', title: 'ROR Registration' })}>
+              <div className="news-card news-card-balsam" onClick={() => setLightbox({ type: 'image', src: `${BASE}/ror.jpg`, title: 'ROR Registration' })}>
                 <div className="news-balsam-logo" style={{ background: '#f8f8f8' }}>
-                  <img src="/ror.jpg" alt="ROR Registration" style={{ maxWidth: '160px' }} />
+                  <img src={`${BASE}/ror.jpg`} alt="ROR Registration" style={{ maxWidth: '160px' }} />
                 </div>
                 <div className="news-card-body">
                   <div className="news-card-badge">إنجاز</div>
@@ -752,7 +754,7 @@ function App() {
               </div>
 
               {/* Accomplishments PDF */}
-              <div className="news-card news-card-balsam" onClick={() => setLightbox({ type: 'pdf', src: '/tuwaiq-accomplishments.pdf', title: 'إنجازات أكاديمية طويق' })}>
+              <div className="news-card news-card-balsam" onClick={() => setLightbox({ type: 'pdf', src: `${BASE}/tuwaiq-accomplishments.pdf`, title: 'إنجازات أكاديمية طويق' })}>
                 <div className="news-balsam-logo" style={{ background: 'linear-gradient(135deg, #1a1a3e, #2d2d5e)', padding: '28px' }}>
                   <div style={{ textAlign: 'center', color: 'white' }}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="40" height="40" style={{ marginBottom: '8px' }}>
@@ -1050,9 +1052,9 @@ function App() {
 
         <div className="fw-posters">
           {[
-            { src: '/1.png', title: 'معسكر الذكاء الاصطناعي التوكيلي', sub: 'AISA Agentic AI Bootcamp' },
-            { src: '/2.png', title: 'من البحث إلى التطبيق', sub: 'From Research to Application' },
-            { src: '/3.png', title: 'نموذج ذكاء اصطناعي عربي', sub: 'Arabic AI Function Calling' },
+            { src: `${BASE}/1.png`, title: 'معسكر الذكاء الاصطناعي التوكيلي', sub: 'AISA Agentic AI Bootcamp' },
+            { src: `${BASE}/2.png`, title: 'من البحث إلى التطبيق', sub: 'From Research to Application' },
+            { src: `${BASE}/3.png`, title: 'نموذج ذكاء اصطناعي عربي', sub: 'Arabic AI Function Calling' },
           ].map((poster, i) => (
             <div key={i} className="fw-poster-card" onClick={() => setLightbox({ type: 'image', src: poster.src, title: poster.title })}>
               <div className="fw-poster-frame">
@@ -1091,11 +1093,11 @@ function App() {
   /* ── Meta ARIA View ── */
   if (currentView === 'meta') {
     const metaProjects = [
-      { title: 'Augmented Reality for Tourism', desc: 'Enhancing Immersive Travel and Cultural Exploration Using Project Aria Glasses', fullTitle: 'Augmented Reality for Tourism: Enhancing Immersive Travel and Cultural Exploration Using Project Aria Glasses', img: '/project1.png', color: '#0984E3' },
-      { title: 'Real-Time Language Interpretation', desc: 'Accessibility Support for the Hearing and Speech Impaired Using Project Aria Glasses', fullTitle: 'Real-Time Language Interpretation and Accessibility Support for the Hearing and Speech Impaired Using Project Aria Glasses', img: '/project2.png', color: '#00B894' },
-      { title: 'Pipeline Inspection & QA', desc: 'AR for Pipeline Inspection and Quality Assurance in the Oil & Gas Sector Using Project Aria Glasses', fullTitle: 'Augmented Reality for Pipeline Inspection and Quality Assurance in the Oil & Gas Sector Using Project Aria Glasses', img: '/Project3.png', color: '#E17055' },
-      { title: 'Daily Personal Assistant', desc: 'Enhancing Quality of Life through Contextual AI Using Project Aria', fullTitle: 'Project Aria as a Daily Personal Assistant: Enhancing Quality of Life through Contextual AI', img: '/project4.png', color: '#6C5CE7' },
-      { title: 'Smart Agriculture', desc: 'Precision Farming Using Project Aria Glasses: A Vision-Based AR Framework', fullTitle: 'Smart Agriculture and Precision Farming Using Project Aria Glasses: A Vision-Based AR Framework', img: '/project5.png', color: '#FDCB6E' },
+      { title: 'Augmented Reality for Tourism', desc: 'Enhancing Immersive Travel and Cultural Exploration Using Project Aria Glasses', fullTitle: 'Augmented Reality for Tourism: Enhancing Immersive Travel and Cultural Exploration Using Project Aria Glasses', img: `${BASE}/project1.png`, color: '#0984E3' },
+      { title: 'Real-Time Language Interpretation', desc: 'Accessibility Support for the Hearing and Speech Impaired Using Project Aria Glasses', fullTitle: 'Real-Time Language Interpretation and Accessibility Support for the Hearing and Speech Impaired Using Project Aria Glasses', img: `${BASE}/project2.png`, color: '#00B894' },
+      { title: 'Pipeline Inspection & QA', desc: 'AR for Pipeline Inspection and Quality Assurance in the Oil & Gas Sector Using Project Aria Glasses', fullTitle: 'Augmented Reality for Pipeline Inspection and Quality Assurance in the Oil & Gas Sector Using Project Aria Glasses', img: `${BASE}/Project3.png`, color: '#E17055' },
+      { title: 'Daily Personal Assistant', desc: 'Enhancing Quality of Life through Contextual AI Using Project Aria', fullTitle: 'Project Aria as a Daily Personal Assistant: Enhancing Quality of Life through Contextual AI', img: `${BASE}/project4.png`, color: '#6C5CE7' },
+      { title: 'Smart Agriculture', desc: 'Precision Farming Using Project Aria Glasses: A Vision-Based AR Framework', fullTitle: 'Smart Agriculture and Precision Farming Using Project Aria Glasses: A Vision-Based AR Framework', img: `${BASE}/project5.png`, color: '#FDCB6E' },
     ];
     return (
       <div className="frameworks-view">
@@ -1121,7 +1123,7 @@ function App() {
 
         <div className="fw-header">
           <div className="meta-logo-row">
-            <img src="/meta-logo.png" alt="Meta" className="meta-collab-logo" />
+            <img src={`${BASE}/meta-logo.png`} alt="Meta" className="meta-collab-logo" />
           </div>
           <h2 className="fw-title" style={{ backgroundImage: 'linear-gradient(135deg, #fff, #74B9FF)' }}>Meta ARIA Glasses</h2>
           <p className="fw-subtitle">5 research papers and products in collaboration with Meta</p>
@@ -1234,7 +1236,7 @@ function App() {
 
         <div className="fw-header">
           <div className="meta-logo-row">
-            <img src="/mawhiba-logo.png" alt="Mawhiba" className="meta-collab-logo" />
+            <img src={`${BASE}/mawhiba-logo.png`} alt="Mawhiba" className="meta-collab-logo" />
           </div>
           <h2 className="fw-title" style={{ backgroundImage: 'linear-gradient(135deg, #fff, #FFEAA7)' }}>أبحاث الموهوبين</h2>
           <p className="fw-subtitle">42 collaborative research projects conducted with high school students</p>
@@ -1265,7 +1267,7 @@ function App() {
         fullTitle: 'منهج طويق للـ Vibe Coding — المنهج العملي لبناء تطبيقات الذكاء الاصطناعي',
         description: 'دليل عملي شامل يقدم منهجية Vibe Coding لبناء التطبيقات باستخدام الذكاء الاصطناعي، حيث يتحول وصف الفكرة بلغة طبيعية إلى تطبيق عملي دون الحاجة لكتابة الكود يدويًا. يهدف لتمكين غير المبرمجين من تحويل أفكارهم إلى منتجات رقمية.',
         descEn: 'A comprehensive practical guide introducing the Vibe Coding methodology — enabling anyone to build AI applications by describing ideas in natural language, without writing code manually.',
-        link: '/vibe-coding.pdf',
+        link: `${BASE}/vibe-coding.pdf`,
         pages: '64 صفحة',
         date: '2026',
         color: '#6C5CE7',
@@ -1277,7 +1279,7 @@ function App() {
         fullTitle: 'تقرير التوجهات التقنية الناشئة لعام 2026 — خارطة طريق التحول الرقمي السيادي',
         description: 'تقرير استراتيجي يرصد التحولات التقنية العالمية لعام 2026 مع التركيز على السوق السعودي تحت رؤية 2030. يغطي تداخل الذكاء الاصطناعي مع لغات البرمجة، والأمن السيبراني، والبنية التحتية المتطورة، مع تحليلات قطاعية مفصلة.',
         descEn: 'A strategic report mapping emerging technology trends for 2026, focusing on Saudi Arabia\'s digital transformation under Vision 2030 — covering AI, cybersecurity, and advanced infrastructure.',
-        link: '/emerging-tech-2026.pdf',
+        link: `${BASE}/emerging-tech-2026.pdf`,
         pages: '44 صفحة',
         date: 'ديسمبر 2025',
         color: '#E84393',
@@ -1289,7 +1291,7 @@ function App() {
         fullTitle: 'مساهمة أكاديمية طويق في منظومة الذكاء الاصطناعي الوطنية — دراسة شمولية للجهود المبذولة',
         description: 'دراسة شمولية تستعرض مساهمات أكاديمية طويق في بناء منظومة الذكاء الاصطناعي الوطنية، بالتعاون مع شركاء النجاح. تغطي الجهود البحثية والتطويرية والتدريبية التي تدعم التحول الرقمي في المملكة العربية السعودية.',
         descEn: 'A comprehensive study showcasing Tuwaiq Academy\'s contributions to the national AI ecosystem, covering research, development, and training efforts supporting Saudi Arabia\'s digital transformation.',
-        link: '/tuwaiq-ai-contribution.pdf',
+        link: `${BASE}/tuwaiq-ai-contribution.pdf`,
         pages: '51 صفحة',
         date: '2025',
         color: '#00B894',
