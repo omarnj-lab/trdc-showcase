@@ -423,6 +423,160 @@ const products = [
   },
 ];
 
+const taicProducts = [
+  {
+    tabName: 'AI Model',
+    title: 'Tuwaiq AI Model',
+    arabicTitle: 'نموذج طويق للذكاء الاصطناعي',
+    tagline: 'Arabic-First Large Language Model',
+    arabicTagline: 'نموذج لغوي عربي يعمل محليًا',
+    description: 'A locally-hosted, privacy-first Arabic large language model developed in-house at Tuwaiq Academy. Optimized for cultural alignment, dialect coverage, and on-premise deployment.',
+    arabicDesc: 'نموذج لغوي عربي يعمل محليًا مع ضمان كامل لخصوصية البيانات، مطوّر داخل أكاديمية طويق ومُحسَّن للسياق الثقافي والتغطية اللهجية والنشر داخل المؤسسة.',
+    img: `${BASE}/tuwaiqAi.jpg`,
+    color: '#00CEC9',
+    accent: '#81ECEC',
+    status: 'Live',
+    statusColor: '#2ecc71',
+    meta: [
+      { label: 'Type', value: 'Local LLM' },
+      { label: 'Languages', value: 'Arabic / English' },
+      { label: 'Deployment', value: 'On-Premise' },
+    ],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="56" height="56">
+        <path d="M12 2a4 4 0 00-4 4v1a4 4 0 00-3 6.86A4 4 0 008 21h8a4 4 0 003-7.14A4 4 0 0016 7V6a4 4 0 00-4-4z" />
+        <path d="M9 11h6M9 15h6M12 7v8" />
+      </svg>
+    ),
+  },
+  {
+    tabName: 'Document Review',
+    title: 'Tuwaiq AI Review Document',
+    arabicTitle: 'مدقق المستندات الذكي',
+    tagline: 'AI Document Quality Evaluator',
+    arabicTagline: 'مُقيّم جودة المستندات بالذكاء الاصطناعي',
+    description: 'An intelligent document review platform that evaluates educational materials across 13 criteria — from curriculum mapping to accessibility — and surfaces actionable, page-referenced recommendations.',
+    arabicDesc: 'منصة ذكية لمراجعة المستندات التعليمية تُقيّمها وفق 13 معيارًا — من ربط المنهج إلى إمكانية الوصول — مع توصيات عملية مرتبطة بالصفحات.',
+    img: `${BASE}/aidoc-screenshot.png`,
+    color: '#6C5CE7',
+    accent: '#A29BFE',
+    status: 'Live',
+    statusColor: '#2ecc71',
+    meta: [
+      { label: 'Criteria', value: '13 Standards' },
+      { label: 'Engine', value: 'Multimodal AI' },
+      { label: 'Output', value: 'Cited Insights' },
+    ],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="56" height="56">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+        <path d="M14 2v6h6M9 13l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    tabName: 'AISA Framework',
+    title: 'Tuwaiq AISA Framework',
+    arabicTitle: 'إطار طويق AISA',
+    tagline: 'Agentic AI Skills & Applications Framework',
+    arabicTagline: 'إطار شامل لمهارات الذكاء الاصطناعي التوكيلي وتطبيقاته',
+    description: 'An end-to-end framework that combines an agentic-AI bootcamp curriculum with deployable Arabic tool-use building blocks — datasets, models, and evaluation suites — so teams can move from training to production.',
+    arabicDesc: 'إطار متكامل يجمع منهج معسكر الذكاء الاصطناعي التوكيلي مع لبنات عربية قابلة للنشر — مجموعات بيانات ونماذج ومجموعات تقييم — لينتقل الفِرق من التدريب إلى الإنتاج.',
+    img: `${BASE}/1.png`,
+    color: '#E17055',
+    accent: '#FAB1A0',
+    status: 'Live',
+    statusColor: '#2ecc71',
+    meta: [
+      { label: 'Scope', value: 'Curriculum + Toolkit' },
+      { label: 'Focus', value: 'Agentic AI' },
+      { label: 'Output', value: 'Models · Datasets · Evals' },
+    ],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="56" height="56">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" />
+        <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+      </svg>
+    ),
+  },
+  {
+    tabName: 'Internal Audit',
+    title: 'Tuwaiq Internal Audit Model',
+    arabicTitle: 'نموذج التدقيق الداخلي',
+    tagline: 'AI-Powered Financial Audit Agent',
+    arabicTagline: 'وكيل ذكاء اصطناعي للتدقيق الداخلي للمعاملات المالية',
+    description: 'An intelligent auditing platform with seven specialized AI agents — Benford\'s Law, duplicate detection, unusual timing, rounded numbers, transaction splitting, segregation of duties, and outlier detection — running over PDF, CSV, and Excel inputs.',
+    arabicDesc: 'منصة تدقيق ذكية تضم سبعة وكلاء متخصصين — قانون بنفورد، كشف التكرارات، التوقيت غير المعتاد، الأرقام المقربة، تجزئة المعاملات، فصل المهام، والقيم الشاذة — تعمل على ملفات PDF و CSV و Excel.',
+    img: `${BASE}/internal_audit.jpg`,
+    color: '#0984E3',
+    accent: '#74B9FF',
+    status: 'Live',
+    statusColor: '#2ecc71',
+    meta: [
+      { label: 'Agents', value: '7 Specialized' },
+      { label: 'Inputs', value: 'PDF · CSV · Excel' },
+      { label: 'Engine', value: 'Local + OpenAI' },
+    ],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="56" height="56">
+        <path d="M3 3h18v4H3zM3 11h18v4H3zM3 19h12v2H3z" />
+        <path d="M7 5h.01M7 13h.01M7 21h.01" />
+      </svg>
+    ),
+  },
+  {
+    tabName: 'AR-FunctionCall-FT',
+    title: 'AISA-AR-FunctionCall-FT',
+    org: 'AISA-Framework',
+    arabicTitle: 'نموذج عربي لاستدعاء الأدوات',
+    tagline: 'Reliable Arabic Structured Tool Calling via Data-Centric Fine-Tuning',
+    arabicTagline: 'استدعاء أدوات عربي موثوق عبر الضبط الدقيق المرتكز على البيانات',
+    description: 'A fine-tuned Arabic LLM specialized in structured tool calling, built through a data-centric fine-tuning pipeline. Delivers near-perfect argument F1 with explicit decision traces and broad dialect coverage.',
+    arabicDesc: 'نموذج لغوي عربي مُعاد ضبطه ومتخصص في استدعاء الأدوات المهيكل عبر مسار ضبط دقيق مرتكز على البيانات — بدقة شبه مثالية، وتتبع قرارات صريح، وتغطية واسعة للهجات.',
+    img: `${BASE}/AISA-FunctionCall.png`,
+    color: '#00B894',
+    accent: '#55EFC4',
+    status: 'Live',
+    statusColor: '#2ecc71',
+    meta: [
+      { label: 'Type', value: 'Fine-Tuned LLM' },
+      { label: 'Approach', value: 'Data-Centric FT' },
+      { label: 'Argument F1', value: 'Near-Perfect' },
+    ],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="56" height="56">
+        <path d="M16 18l6-6-6-6M8 6l-6 6 6 6M14 4l-4 16" />
+      </svg>
+    ),
+  },
+  {
+    tabName: 'CyberBench',
+    title: 'Tuwaiq CyberBench',
+    arabicTitle: 'معيار طويق للأمن السيبراني',
+    tagline: 'Cybersecurity Benchmark for Arabic LLMs',
+    arabicTagline: 'معيار شامل لتقييم نماذج الذكاء الاصطناعي في الأمن السيبراني',
+    description: 'A comprehensive evaluation suite for measuring how language models reason over cybersecurity tasks in Arabic and English — covering vulnerability analysis, secure code review, threat modeling, and red-team scenarios.',
+    arabicDesc: 'مجموعة تقييم شاملة لقياس قدرة النماذج اللغوية على الاستدلال في مهام الأمن السيبراني بالعربية والإنجليزية — تشمل تحليل الثغرات، ومراجعة الكود الآمن، ونمذجة التهديدات، وسيناريوهات الفرق الحمراء.',
+    img: null,
+    color: '#FF6B6B',
+    accent: '#FF8E8E',
+    status: 'Coming Soon',
+    statusColor: '#FFB142',
+    comingSoon: true,
+    meta: [
+      { label: 'Status', value: 'In Development' },
+      { label: 'Domain', value: 'Security AI' },
+      { label: 'Release', value: 'TBA' },
+    ],
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" width="56" height="56">
+        <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+  },
+];
+
 function App() {
   const scrollRef = useRef(null);
   const prodScrollRef = useRef(null);
@@ -433,6 +587,7 @@ function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('trdc-theme') || 'light');
   const [repIndex, setRepIndex] = useState(0);
   const repScrollRef = useRef(null);
+  const [taicIndex, setTaicIndex] = useState(0);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
@@ -532,6 +687,9 @@ function App() {
         const cur = prodRef.current;
         if (e.key === 'ArrowRight') scrollProdTo(cur + 1);
         if (e.key === 'ArrowLeft') scrollProdTo(cur - 1);
+      } else if (currentView === 'taic') {
+        if (e.key === 'ArrowRight') setTaicIndex(i => Math.min(i + 1, taicProducts.length - 1));
+        if (e.key === 'ArrowLeft') setTaicIndex(i => Math.max(i - 1, 0));
       }
     };
     window.addEventListener('keydown', handler);
@@ -542,14 +700,36 @@ function App() {
   if (heroVisible) {
     return (
       <div className="landing">
-        {/* Theme toggle */}
-        <button className="theme-toggle theme-toggle-float" onClick={toggleTheme} aria-label="Toggle theme">
-          {theme === 'dark' ? (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="20" height="20"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          ) : (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="20" height="20"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-          )}
-        </button>
+        {/* Top Nav Bar */}
+        <nav className="landing-nav">
+          <div className="landing-nav-inner">
+            <div className="landing-nav-brand">
+              <span className="landing-nav-logo">TRDC</span>
+              <span className="landing-nav-sep" />
+              <span className="landing-nav-tagline">Tuwaiq R&amp;D Center</span>
+            </div>
+
+            <div className="landing-nav-links">
+              <button className="landing-nav-link landing-nav-link-featured" onClick={() => setCurrentView('taic')}>
+                <span className="landing-nav-link-glow" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="16" height="16">
+                  <path d="M12 2a4 4 0 00-4 4v1a4 4 0 00-3 6.86A4 4 0 008 21h8a4 4 0 003-7.14A4 4 0 0016 7V6a4 4 0 00-4-4z" />
+                  <path d="M9 11h6M9 15h6M12 7v8" />
+                </svg>
+                <span>Tuwaiq AI Center</span>
+                <span className="landing-nav-badge">NEW</span>
+              </button>
+
+              <button className="theme-toggle landing-nav-theme" onClick={toggleTheme} aria-label="Toggle theme">
+                {theme === 'dark' ? (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+                )}
+              </button>
+            </div>
+          </div>
+        </nav>
 
         {/* ─── Section 1: Hero Banner ─── */}
         <section className="hero hero-split">
@@ -778,6 +958,40 @@ function App() {
                       <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
                     </svg>
                     View Document
+                  </span>
+                </div>
+              </div>
+
+              {/* HuggingFace */}
+              <div className="news-card news-card-balsam news-card-hf">
+                <div className="news-balsam-logo" style={{ background: 'linear-gradient(135deg, #FFD21E, #FFF0B3)', padding: '28px' }}>
+                  <div style={{ textAlign: 'center' }}>
+                    <svg viewBox="0 0 120 120" width="56" height="56" style={{ marginBottom: '6px' }}>
+                      <circle cx="60" cy="60" r="56" fill="#FFD21E"/>
+                      <ellipse cx="40" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
+                      <ellipse cx="80" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
+                      <path d="M38 75 Q60 92 82 75" stroke="#1a1a2e" strokeWidth="5" fill="none" strokeLinecap="round"/>
+                      <circle cx="33" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
+                      <circle cx="87" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
+                    </svg>
+                    <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#1a1a2e', opacity: 0.6 }}>Coming Soon</div>
+                  </div>
+                </div>
+                <div className="news-card-body">
+                  <div className="news-card-badge" style={{ background: 'linear-gradient(135deg, #FFD21E, #FFC107)', color: '#1a1a2e' }}>قريبًا</div>
+                  <h3 className="news-card-title">إطلاق حساب المركز على HuggingFace</h3>
+                  <h4 className="news-card-title-en">TRDC HuggingFace Organization</h4>
+                  <p className="news-balsam-desc">
+                    نعلن قريبًا عن إطلاق حساب مركز طويق للأبحاث والتطوير على منصة HuggingFace، لنشر النماذج اللغوية ومجموعات البيانات والأدوات البحثية المفتوحة المصدر للمجتمع البحثي والتقني.
+                  </p>
+                  <p className="news-balsam-desc-en">
+                    Announcing our upcoming HuggingFace organization for publishing open-source Arabic AI models, datasets, and research tools.
+                  </p>
+                  <span className="news-click-hint" style={{ color: '#FFC107' }}>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                      <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                    </svg>
+                    Stay Tuned
                   </span>
                 </div>
               </div>
@@ -1255,6 +1469,190 @@ function App() {
             </div>
           ))}
         </div>
+      </div>
+    );
+  }
+
+  /* ── TAIC (Tuwaiq AI Center) View ── */
+  if (currentView === 'taic') {
+    const tp = taicProducts[taicIndex];
+    return (
+      <div className="taic-view" style={{ '--clr': tp.color, '--acc': tp.accent }}>
+        <header className="topbar">
+          <button className="topbar-back" onClick={handleBackToHero}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <div className="topbar-brand">
+            <span className="topbar-logo">TRDC</span>
+            <span className="topbar-sep">|</span>
+            <span className="topbar-page">Tuwaiq AI Center</span>
+          </div>
+          <div className="topbar-right">
+            <div className="topbar-counter">
+              <span className="topbar-current">{String(taicIndex + 1).padStart(2, '0')}</span>
+              <span className="topbar-of">/</span>
+              <span className="topbar-total">{String(taicProducts.length).padStart(2, '0')}</span>
+            </div>
+            <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === 'dark' ? (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              ) : (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+              )}
+            </button>
+          </div>
+        </header>
+
+        {/* Tab strip */}
+        <div className="taic-tabs">
+          <div className="taic-tabs-inner">
+            {taicProducts.map((p, i) => (
+              <button
+                key={i}
+                className={`taic-tab ${i === taicIndex ? 'active' : ''} ${p.comingSoon ? 'taic-tab-soon' : ''}`}
+                onClick={() => setTaicIndex(i)}
+              >
+                <span className="taic-tab-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="taic-tab-name">{p.tabName}</span>
+                {p.comingSoon && <span className="taic-tab-soon-dot" />}
+              </button>
+            ))}
+            <div
+              className="taic-tabs-indicator"
+              style={{
+                width: `calc((100% - 8px) / ${taicProducts.length})`,
+                transform: `translateX(calc(${taicIndex} * 100%))`,
+                background: `linear-gradient(135deg, ${tp.color}, ${tp.accent})`,
+              }}
+            />
+          </div>
+        </div>
+
+        {/* Stage */}
+        <div className="taic-stage" key={taicIndex}>
+          <span className="taic-stage-watermark">{String(taicIndex + 1).padStart(2, '0')}</span>
+          <div className="taic-stage-blob taic-stage-blob-1" style={{ background: tp.color }} />
+          <div className="taic-stage-blob taic-stage-blob-2" style={{ background: tp.accent }} />
+
+          <div className="taic-stage-grid">
+            {/* Left — Title + copy */}
+            <div className="taic-stage-text">
+              <div className="taic-stage-eyebrow">
+                <span
+                  className="taic-stage-status-dot"
+                  style={{
+                    background: tp.statusColor,
+                    boxShadow: `0 0 0 3px ${tp.statusColor}40`,
+                  }}
+                />
+                {tp.status} · Tuwaiq AI Center
+              </div>
+
+              {tp.org && <div className="taic-stage-org">{tp.org}</div>}
+
+              <h1 className="taic-stage-title">
+                <span className="taic-stage-title-en" style={{ backgroundImage: `linear-gradient(135deg, ${tp.color}, ${tp.accent})` }}>
+                  {tp.title}
+                </span>
+                <span className="taic-stage-title-ar">{tp.arabicTitle}</span>
+              </h1>
+
+              <p className="taic-stage-tagline">{tp.tagline}</p>
+              <p className="taic-stage-tagline-ar">{tp.arabicTagline}</p>
+
+              <p className="taic-stage-desc">{tp.description}</p>
+              <p className="taic-stage-desc-ar">{tp.arabicDesc}</p>
+
+              <div className="taic-stage-meta">
+                {tp.meta.map((m, i) => (
+                  <div key={i} className="taic-stage-meta-item">
+                    <span className="taic-stage-meta-label">{m.label}</span>
+                    <span className="taic-stage-meta-value">{m.value}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right — Image / Icon */}
+            <div className="taic-stage-visual">
+              <div className="taic-stage-icon-bg">{tp.icon}</div>
+              {tp.comingSoon ? (
+                <div className="taic-stage-frame taic-stage-frame-soon">
+                  <div className="taic-stage-frame-glow" />
+                  <div className="taic-stage-soon-pattern" />
+                  <div className="taic-stage-soon-content">
+                    <div className="taic-stage-soon-icon">{tp.icon}</div>
+                    <span className="taic-stage-soon-badge">Coming Soon</span>
+                    <span className="taic-stage-soon-sub">قريبًا</span>
+                  </div>
+                </div>
+              ) : (
+                <div
+                  className="taic-stage-frame"
+                  onClick={() => setLightbox({ type: 'image', src: tp.img, title: tp.title })}
+                >
+                  <div className="taic-stage-frame-glow" />
+                  <img src={tp.img} alt={tp.title} className="taic-stage-img" />
+                  <div className="taic-stage-frame-overlay">
+                    <span className="taic-stage-frame-zoom">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="22" height="22">
+                        <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" />
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Nav arrows */}
+        <button
+          className={`nav-arrow nav-prev ${taicIndex === 0 ? 'hidden' : ''}`}
+          onClick={() => setTaicIndex(Math.max(0, taicIndex - 1))}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
+        </button>
+        <button
+          className={`nav-arrow nav-next ${taicIndex === taicProducts.length - 1 ? 'hidden' : ''}`}
+          onClick={() => setTaicIndex(Math.min(taicProducts.length - 1, taicIndex + 1))}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
+        </button>
+
+        {/* Dots */}
+        <nav className="dots">
+          {taicProducts.map((p, i) => (
+            <button
+              key={i}
+              className={`dot ${i === taicIndex ? 'active' : ''}`}
+              onClick={() => setTaicIndex(i)}
+              style={i === taicIndex ? { background: p.color } : {}}
+            >
+              <span className="dot-tip">{p.title}</span>
+            </button>
+          ))}
+        </nav>
+
+        <div className="kb-hint">
+          <kbd>&larr;</kbd> <kbd>&rarr;</kbd> to navigate
+        </div>
+
+        {lightbox && (
+          <div className="lightbox" onClick={() => setLightbox(null)}>
+            <button className="lightbox-close" onClick={() => setLightbox(null)}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="28" height="28">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+              <img src={lightbox.src} alt={lightbox.title} className="lightbox-img" />
+              <p className="lightbox-caption">{lightbox.title}</p>
+            </div>
+          </div>
+        )}
       </div>
     );
   }

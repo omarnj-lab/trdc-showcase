@@ -1867,6 +1867,598 @@ body {
   letter-spacing: 0.3px;
 }
 
+/* ================================================
+   LANDING — Top Nav Bar
+   ================================================ */
+.landing-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg-tertiary) 78%, transparent);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.landing-nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.landing-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+}
+
+.landing-nav-logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.landing-nav-sep {
+  width: 1px;
+  height: 16px;
+  background: var(--border-card);
+}
+
+.landing-nav-tagline {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.4px;
+}
+
+.landing-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.landing-nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.landing-nav-link-featured {
+  background: linear-gradient(135deg, rgba(0, 206, 201, 0.14), rgba(108, 92, 231, 0.14));
+  border-color: rgba(0, 206, 201, 0.35);
+  color: var(--text-primary);
+}
+
+.landing-nav-link-featured:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 206, 201, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 206, 201, 0.18);
+}
+
+.landing-nav-link-glow {
+  position: absolute;
+  inset: -1px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #00CEC9, #6C5CE7);
+  opacity: 0;
+  filter: blur(10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.landing-nav-link-featured:hover .landing-nav-link-glow {
+  opacity: 0.35;
+}
+
+.landing-nav-badge {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #00CEC9, #6C5CE7);
+  color: #fff;
+}
+
+.landing-nav-theme {
+  width: 36px;
+  height: 36px;
+}
+
+/* ================================================
+   TAIC — Tuwaiq AI Center (Carousel)
+   ================================================ */
+.taic-view {
+  min-height: 100vh;
+  background: var(--bg-tertiary);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Tabs */
+.taic-tabs {
+  display: flex;
+  justify-content: center;
+  padding: 24px 24px 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.taic-tabs::-webkit-scrollbar { display: none; }
+
+.taic-tabs-inner {
+  position: relative;
+  display: flex;
+  gap: 2px;
+  padding: 5px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+
+.taic-tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: inherit;
+  white-space: nowrap;
+  flex: 1 1 0;
+  justify-content: center;
+  min-width: 0;
+}
+
+.taic-tab:hover {
+  color: var(--text-secondary);
+}
+
+.taic-tab.active {
+  color: #fff;
+}
+
+.taic-tab-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  opacity: 0.65;
+}
+
+.taic-tab-soon-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFB142;
+  box-shadow: 0 0 8px rgba(255, 177, 66, 0.5);
+}
+
+.taic-tab.active .taic-tab-soon-dot {
+  background: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.taic-tabs-indicator {
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 100px;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease;
+  z-index: 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Stage */
+.taic-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 80px 80px;
+  animation: taicStageIn 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+}
+
+@keyframes taicStageIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.taic-stage-watermark {
+  position: absolute;
+  bottom: -40px;
+  left: 32px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(14rem, 28vw, 24rem);
+  font-weight: 900;
+  line-height: 0.85;
+  color: var(--clr);
+  opacity: 0.05;
+  pointer-events: none;
+  user-select: none;
+}
+
+.taic-stage-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.taic-stage-blob-1 {
+  width: 480px;
+  height: 480px;
+  top: -120px;
+  right: -80px;
+}
+
+.taic-stage-blob-2 {
+  width: 380px;
+  height: 380px;
+  bottom: -120px;
+  left: -80px;
+  opacity: 0.1;
+}
+
+.taic-stage-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 64px;
+  align-items: center;
+  max-width: 1180px;
+  width: 100%;
+}
+
+/* Left text */
+.taic-stage-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.taic-stage-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding: 6px 14px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 100px;
+  margin-bottom: 6px;
+}
+
+.taic-stage-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2ecc71;
+  animation: taicPulse 2s ease-in-out infinite;
+}
+
+@keyframes taicPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.2); }
+}
+
+.taic-stage-org {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--clr);
+  padding: 4px 10px;
+  background: color-mix(in srgb, var(--clr) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--clr) 30%, transparent);
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.taic-stage-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+}
+
+.taic-stage-title-en {
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.taic-stage-title-ar {
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  color: var(--text-primary);
+  direction: rtl;
+  margin-top: 2px;
+}
+
+.taic-stage-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 14px 0 0;
+}
+
+.taic-stage-tagline-ar {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  direction: rtl;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  margin: 0;
+}
+
+.taic-stage-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin: 18px 0 0;
+  max-width: 540px;
+}
+
+.taic-stage-desc-ar {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  line-height: 1.7;
+  direction: rtl;
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  margin: 0;
+  max-width: 540px;
+  padding-right: 14px;
+  border-right: 2px solid var(--border-card);
+}
+
+.taic-stage-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 36px;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border-card);
+}
+
+.taic-stage-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.taic-stage-meta-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.taic-stage-meta-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* Right visual */
+.taic-stage-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taic-stage-icon-bg {
+  position: absolute;
+  top: -28px;
+  right: -16px;
+  width: 110px;
+  height: 110px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--clr), var(--acc));
+  color: #fff;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 0 6px var(--bg-tertiary);
+  z-index: 2;
+  transform: rotate(-6deg);
+  transition: transform 0.4s ease;
+}
+
+.taic-stage-visual:hover .taic-stage-icon-bg {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+.taic-stage-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid var(--border-card);
+  background: var(--bg-card);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.taic-stage-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+}
+
+.taic-stage-frame-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--clr), var(--acc));
+  opacity: 0.25;
+  filter: blur(24px);
+  z-index: -1;
+}
+
+.taic-stage-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.taic-stage-frame:hover .taic-stage-img {
+  transform: scale(1.04);
+}
+
+.taic-stage-frame-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 6, 15, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.taic-stage-frame:hover .taic-stage-frame-overlay {
+  opacity: 1;
+}
+
+.taic-stage-frame-zoom {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Coming Soon placeholder */
+.taic-stage-frame-soon {
+  cursor: default;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--clr) 18%, var(--bg-card)), var(--bg-card));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.taic-stage-frame-soon:hover {
+  transform: none;
+}
+
+.taic-stage-soon-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(45deg, color-mix(in srgb, var(--clr) 10%, transparent) 0, color-mix(in srgb, var(--clr) 10%, transparent) 1px, transparent 1px, transparent 18px),
+    repeating-linear-gradient(-45deg, color-mix(in srgb, var(--clr) 10%, transparent) 0, color-mix(in srgb, var(--clr) 10%, transparent) 1px, transparent 1px, transparent 18px);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.taic-stage-soon-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  padding: 32px;
+}
+
+.taic-stage-soon-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--clr), var(--acc));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--clr) 30%, transparent);
+  animation: taicSoonFloat 3.6s ease-in-out infinite;
+}
+
+@keyframes taicSoonFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.taic-stage-soon-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--clr);
+  padding: 8px 18px;
+  background: color-mix(in srgb, var(--clr) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--clr) 35%, transparent);
+  border-radius: 100px;
+}
+
+.taic-stage-soon-sub {
+  font-family: 'Noto Kufi Arabic', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  direction: rtl;
+}
+
 @media (max-width: 1100px) {
   .explore-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1897,6 +2489,35 @@ body {
   }
   .explore-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .taic-stage {
+    padding: 24px 24px 80px;
+  }
+  .taic-stage-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .taic-stage-visual {
+    order: -1;
+  }
+  .taic-stage-icon-bg {
+    width: 80px;
+    height: 80px;
+    top: -20px;
+    right: -8px;
+  }
+  .landing-nav-tagline {
+    display: none;
+  }
+  .landing-nav-inner {
+    padding: 12px 18px;
+  }
+  .taic-tabs {
+    padding: 18px 14px 4px;
+  }
+  .taic-tab {
+    padding: 9px 14px;
+    font-size: 0.78rem;
   }
 }
 
