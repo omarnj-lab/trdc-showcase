@@ -421,6 +421,24 @@ const products = [
     media: { type: 'image', src: `${BASE}/arafunctioncalling_model.png` },
     resources: [{ label: 'HuggingFace', url: 'https://huggingface.co/AISA-Framework/AISA-AR' }],
   },
+  {
+    id: 'huggingface',
+    name: 'TRDC on HuggingFace',
+    tagline: 'Open-Source AI Hub — Coming Soon',
+    icon: 'robot',
+    color: '#FFB800',
+    accent: '#FFD54F',
+    description:
+      'Announcing our upcoming HuggingFace organization for the Tuwaiq Research & Development Center. A central hub for publishing open-source Arabic AI models, datasets, benchmarks, and research tools to the global AI community.',
+    arabicDesc:
+      'نعلن قريبًا عن إطلاق حساب مركز طويق للأبحاث والتطوير على منصة HuggingFace، لنشر النماذج اللغوية ومجموعات البيانات والمعايير والأدوات البحثية المفتوحة المصدر للمجتمع البحثي والتقني العالمي.',
+    useCases: [
+      'Publishing Arabic LLMs & NLP Models',
+      'Open-Source Datasets & Benchmarks',
+      'Research Tools & Frameworks',
+    ],
+    media: { type: 'image', src: `${BASE}/mainbg.jpg` },
+  },
 ];
 
 const taicProducts = [
@@ -820,7 +838,7 @@ function App() {
                 </div>
                 <h3 className="explore-card-title">المنتجات الذكية</h3>
                 <p className="explore-card-sub">AI Products</p>
-                <span className="explore-card-count">6</span>
+                <span className="explore-card-count">7</span>
               </button>
 
               <button className="explore-card" onClick={handleEnterFrameworks}>
@@ -962,39 +980,6 @@ function App() {
                 </div>
               </div>
 
-              {/* HuggingFace */}
-              <div className="news-card news-card-balsam news-card-hf">
-                <div className="news-balsam-logo" style={{ background: 'linear-gradient(135deg, #FFD21E, #FFF0B3)', padding: '28px' }}>
-                  <div style={{ textAlign: 'center' }}>
-                    <svg viewBox="0 0 120 120" width="56" height="56" style={{ marginBottom: '6px' }}>
-                      <circle cx="60" cy="60" r="56" fill="#FFD21E"/>
-                      <ellipse cx="40" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
-                      <ellipse cx="80" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
-                      <path d="M38 75 Q60 92 82 75" stroke="#1a1a2e" strokeWidth="5" fill="none" strokeLinecap="round"/>
-                      <circle cx="33" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
-                      <circle cx="87" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
-                    </svg>
-                    <div style={{ fontSize: '0.7rem', fontWeight: 700, color: '#1a1a2e', opacity: 0.6 }}>Coming Soon</div>
-                  </div>
-                </div>
-                <div className="news-card-body">
-                  <div className="news-card-badge" style={{ background: 'linear-gradient(135deg, #FFD21E, #FFC107)', color: '#1a1a2e' }}>قريبًا</div>
-                  <h3 className="news-card-title">إطلاق حساب المركز على HuggingFace</h3>
-                  <h4 className="news-card-title-en">TRDC HuggingFace Organization</h4>
-                  <p className="news-balsam-desc">
-                    نعلن قريبًا عن إطلاق حساب مركز طويق للأبحاث والتطوير على منصة HuggingFace، لنشر النماذج اللغوية ومجموعات البيانات والأدوات البحثية المفتوحة المصدر للمجتمع البحثي والتقني.
-                  </p>
-                  <p className="news-balsam-desc-en">
-                    Announcing our upcoming HuggingFace organization for publishing open-source Arabic AI models, datasets, and research tools.
-                  </p>
-                  <span className="news-click-hint" style={{ color: '#FFC107' }}>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
-                      <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                    </svg>
-                    Stay Tuned
-                  </span>
-                </div>
-              </div>
             </div>
           </div>
         </section>
