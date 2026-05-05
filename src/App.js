@@ -423,13 +423,6 @@ const products = [
   },
 ];
 
-/* HuggingFace repos data */
-const huggingfaceRepos = [
-  { name: 'AISA-Framework', desc: 'Agentic AI Systems Architecture — models, datasets, and tools', url: 'https://huggingface.co/AISA-Framework', type: 'org' },
-  { name: 'AISA-AR-FunctionCall-FT', desc: 'Arabic structured tool calling model with 5 dialect coverage', url: 'https://huggingface.co/AISA-Framework', type: 'model' },
-  { name: 'NAMAA-Space/AraModernBert', desc: 'Arabic ModernBERT with 8K context and transtokenized initialization', url: 'https://huggingface.co/NAMAA-Space/AraModernBert-Base-V1.0', type: 'model' },
-  { name: 'riotu-lab/ARCADE-full', desc: 'City-scale Arabic dialect audio dataset — 58 cities, 19 countries', url: 'https://huggingface.co/datasets/riotu-lab/ARCADE-full', type: 'dataset' },
-];
 
 const taicProducts = [
   {
@@ -892,9 +885,9 @@ function App() {
                     <path d="M8 15c1.5 2 6.5 2 8 0" strokeLinecap="round" />
                   </svg>
                 </div>
-                <h3 className="explore-card-title">HuggingFace</h3>
-                <p className="explore-card-sub">Open-Source Models & Data</p>
-                <span className="explore-card-count">4</span>
+                <h3 className="explore-card-title">Tuwaiq AI Center</h3>
+                <p className="explore-card-sub">HuggingFace — Coming Soon</p>
+                <span className="explore-card-count" style={{ fontSize: '1rem' }}>🤗</span>
               </button>
             </div>
           </div>
@@ -1671,9 +1664,9 @@ function App() {
           </button>
         </header>
 
-        <div className="fw-header">
-          <div className="meta-logo-row">
-            <svg viewBox="0 0 120 120" width="64" height="64">
+        <div className="hf-announce">
+          <div className="hf-announce-icon">
+            <svg viewBox="0 0 120 120" width="80" height="80">
               <circle cx="60" cy="60" r="56" fill="#FFD21E"/>
               <ellipse cx="42" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
               <ellipse cx="78" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
@@ -1682,26 +1675,45 @@ function App() {
               <circle cx="86" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
             </svg>
           </div>
-          <h2 className="fw-title" style={{ backgroundImage: 'linear-gradient(135deg, var(--text-primary), #FFB800)' }}>TRDC on HuggingFace</h2>
-          <p className="fw-subtitle">نماذج ومجموعات بيانات مفتوحة المصدر — Open-Source Models & Datasets</p>
-        </div>
 
-        <div className="hf-grid">
-          {huggingfaceRepos.map((repo, i) => (
-            <a key={i} href={repo.url} target="_blank" rel="noopener noreferrer" className="hf-card">
-              <div className="hf-card-type" style={{ background: repo.type === 'org' ? '#FFB800' : repo.type === 'model' ? '#6C5CE7' : '#00B894' }}>
-                {repo.type === 'org' ? 'Organization' : repo.type === 'model' ? 'Model' : 'Dataset'}
-              </div>
-              <h3 className="hf-card-name">{repo.name}</h3>
-              <p className="hf-card-desc">{repo.desc}</p>
-              <div className="hf-card-link">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
-                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
-                </svg>
-                View on HuggingFace
-              </div>
-            </a>
-          ))}
+          <div className="hf-announce-badge">Coming Soon</div>
+
+          <h2 className="hf-announce-title">Tuwaiq AI Center</h2>
+          <p className="hf-announce-sub">on HuggingFace</p>
+
+          <div className="hf-announce-path">
+            <span className="hf-path-segment">TRDC</span>
+            <span className="hf-path-sep">|</span>
+            <span className="hf-path-segment">Tuwaiq AI Center</span>
+          </div>
+
+          <p className="hf-announce-desc">
+            نعلن قريبًا عن إطلاق حساب مركز طويق للذكاء الاصطناعي على منصة HuggingFace، لنشر النماذج اللغوية ومجموعات البيانات والأدوات البحثية المفتوحة المصدر للمجتمع البحثي والتقني العالمي.
+          </p>
+          <p className="hf-announce-desc-en">
+            Announcing the upcoming launch of Tuwaiq AI Center on HuggingFace — an open-source hub for Arabic AI models, datasets, and research tools.
+          </p>
+
+          <div className="hf-announce-features">
+            <div className="hf-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="24" height="24">
+                <rect x="3" y="11" width="18" height="10" rx="2" /><circle cx="12" cy="5" r="2" /><path d="M12 7v4" />
+              </svg>
+              <span>Arabic AI Models</span>
+            </div>
+            <div className="hf-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="24" height="24">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" /><path d="M14 2v6h6M16 13H8M16 17H8" />
+              </svg>
+              <span>Open-Source Datasets</span>
+            </div>
+            <div className="hf-feature">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="24" height="24">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+              </svg>
+              <span>Research Frameworks</span>
+            </div>
+          </div>
         </div>
       </div>
     );
