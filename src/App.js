@@ -421,24 +421,14 @@ const products = [
     media: { type: 'image', src: `${BASE}/arafunctioncalling_model.png` },
     resources: [{ label: 'HuggingFace', url: 'https://huggingface.co/AISA-Framework/AISA-AR' }],
   },
-  {
-    id: 'huggingface',
-    name: 'TRDC on HuggingFace',
-    tagline: 'Open-Source AI Hub — Coming Soon',
-    icon: 'robot',
-    color: '#FFB800',
-    accent: '#FFD54F',
-    description:
-      'Announcing our upcoming HuggingFace organization for the Tuwaiq Research & Development Center. A central hub for publishing open-source Arabic AI models, datasets, benchmarks, and research tools to the global AI community.',
-    arabicDesc:
-      'نعلن قريبًا عن إطلاق حساب مركز طويق للأبحاث والتطوير على منصة HuggingFace، لنشر النماذج اللغوية ومجموعات البيانات والمعايير والأدوات البحثية المفتوحة المصدر للمجتمع البحثي والتقني العالمي.',
-    useCases: [
-      'Publishing Arabic LLMs & NLP Models',
-      'Open-Source Datasets & Benchmarks',
-      'Research Tools & Frameworks',
-    ],
-    media: { type: 'image', src: `${BASE}/mainbg.jpg` },
-  },
+];
+
+/* HuggingFace repos data */
+const huggingfaceRepos = [
+  { name: 'AISA-Framework', desc: 'Agentic AI Systems Architecture — models, datasets, and tools', url: 'https://huggingface.co/AISA-Framework', type: 'org' },
+  { name: 'AISA-AR-FunctionCall-FT', desc: 'Arabic structured tool calling model with 5 dialect coverage', url: 'https://huggingface.co/AISA-Framework', type: 'model' },
+  { name: 'NAMAA-Space/AraModernBert', desc: 'Arabic ModernBERT with 8K context and transtokenized initialization', url: 'https://huggingface.co/NAMAA-Space/AraModernBert-Base-V1.0', type: 'model' },
+  { name: 'riotu-lab/ARCADE-full', desc: 'City-scale Arabic dialect audio dataset — 58 cities, 19 countries', url: 'https://huggingface.co/datasets/riotu-lab/ARCADE-full', type: 'dataset' },
 ];
 
 const taicProducts = [
@@ -838,7 +828,7 @@ function App() {
                 </div>
                 <h3 className="explore-card-title">المنتجات الذكية</h3>
                 <p className="explore-card-sub">AI Products</p>
-                <span className="explore-card-count">7</span>
+                <span className="explore-card-count">6</span>
               </button>
 
               <button className="explore-card" onClick={handleEnterFrameworks}>
@@ -890,6 +880,21 @@ function App() {
                 <h3 className="explore-card-title">الإصدارات</h3>
                 <p className="explore-card-sub">Reports & Publications</p>
                 <span className="explore-card-count">3</span>
+              </button>
+
+              <button className="explore-card" onClick={() => setCurrentView('huggingface')}>
+                <div className="explore-card-glow" style={{ background: '#FFB800' }} />
+                <div className="explore-card-icon" style={{ background: 'linear-gradient(135deg, #FFB800, #FFD54F)' }}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#1a1a2e" strokeWidth="1.5" width="30" height="30">
+                    <circle cx="12" cy="12" r="10" />
+                    <circle cx="9" cy="10" r="1.5" fill="#1a1a2e" stroke="none" />
+                    <circle cx="15" cy="10" r="1.5" fill="#1a1a2e" stroke="none" />
+                    <path d="M8 15c1.5 2 6.5 2 8 0" strokeLinecap="round" />
+                  </svg>
+                </div>
+                <h3 className="explore-card-title">HuggingFace</h3>
+                <p className="explore-card-sub">Open-Source Models & Data</p>
+                <span className="explore-card-count">4</span>
               </button>
             </div>
           </div>
@@ -1638,6 +1643,66 @@ function App() {
             </div>
           </div>
         )}
+      </div>
+    );
+  }
+
+  /* ── HuggingFace View ── */
+  if (currentView === 'huggingface') {
+    return (
+      <div className="frameworks-view">
+        <header className="topbar">
+          <button className="topbar-back" onClick={handleBackToHero}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="18" height="18">
+              <path d="M19 12H5M12 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <div className="topbar-brand">
+            <span className="topbar-logo">TRDC</span>
+            <span className="topbar-sep">|</span>
+            <span className="topbar-page">HuggingFace</span>
+          </div>
+          <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+            {theme === 'dark' ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" width="18" height="18"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            )}
+          </button>
+        </header>
+
+        <div className="fw-header">
+          <div className="meta-logo-row">
+            <svg viewBox="0 0 120 120" width="64" height="64">
+              <circle cx="60" cy="60" r="56" fill="#FFD21E"/>
+              <ellipse cx="42" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
+              <ellipse cx="78" cy="52" rx="6" ry="7" fill="#1a1a2e"/>
+              <path d="M40 75 Q60 92 80 75" stroke="#1a1a2e" strokeWidth="5" fill="none" strokeLinecap="round"/>
+              <circle cx="34" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
+              <circle cx="86" cy="68" r="5" fill="#FF9D00" opacity="0.5"/>
+            </svg>
+          </div>
+          <h2 className="fw-title" style={{ backgroundImage: 'linear-gradient(135deg, var(--text-primary), #FFB800)' }}>TRDC on HuggingFace</h2>
+          <p className="fw-subtitle">نماذج ومجموعات بيانات مفتوحة المصدر — Open-Source Models & Datasets</p>
+        </div>
+
+        <div className="hf-grid">
+          {huggingfaceRepos.map((repo, i) => (
+            <a key={i} href={repo.url} target="_blank" rel="noopener noreferrer" className="hf-card">
+              <div className="hf-card-type" style={{ background: repo.type === 'org' ? '#FFB800' : repo.type === 'model' ? '#6C5CE7' : '#00B894' }}>
+                {repo.type === 'org' ? 'Organization' : repo.type === 'model' ? 'Model' : 'Dataset'}
+              </div>
+              <h3 className="hf-card-name">{repo.name}</h3>
+              <p className="hf-card-desc">{repo.desc}</p>
+              <div className="hf-card-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="14" height="14">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                </svg>
+                View on HuggingFace
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     );
   }
